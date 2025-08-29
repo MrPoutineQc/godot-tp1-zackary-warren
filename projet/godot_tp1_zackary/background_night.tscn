@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs1fq2jcenb00"]
+
+[ext_resource type="Texture2D" uid="uid://b0fm7bafah7wu" path="res://ville_nuit.png" id="1_4lhmv"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4lhmv")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctk5lf3vriws6"]
+
+[ext_resource type="PackedScene" uid="uid://dn0ebqg4544on" path="res://background_day.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cs1fq2jcenb00" path="res://background_night.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bjqfprcom2fik" path="res://bouton.tscn" id="3_1bvp3"]
+
+[sub_resource type="GDScript" id="GDScript_h2yge"]
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_h2yge")
+
+[node name="background_night" parent="." instance=ExtResource("2_h2yge")]
+position = Vector2(580, 280)
+scale = Vector2(0.75, 0.75)
+
+[node name="background_day" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(580, 280)
+scale = Vector2(0.75, 0.75)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(600, 500)
+transform = Transform2D(1, 0, 0, 1, 600, 500)
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("3_1bvp3")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+script = SubResource("GDScript_h2yge")
